@@ -5,11 +5,11 @@ class Solution {
         int left = 0;
         int right = height.length - 1;
         while(left < right) {
-            if (height[left] < height[right]) {
+            if (height[left] <= height[right]) {
                 int localMax = height[left] * (right - left);
                 max = Math.max(localMax, max);
                 left++;
-            } else if (height[left] >= height[right]) {
+            } else {
                 int localMax = height[right] * (right - left);
                 max = Math.max(localMax, max);
                 right--;
